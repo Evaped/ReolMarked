@@ -58,6 +58,7 @@ public class ShelfController : ControllerBase
             return NotFound();
         }
 
+        existingShelf.Id = updatedShelf.Id;
         existingShelf.Location = updatedShelf.Location;
         existingShelf.shelfType = updatedShelf.shelfType;
 

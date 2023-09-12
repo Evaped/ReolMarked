@@ -9,8 +9,8 @@ namespace ReolMarked
     public class Renter
     {
         public int Id { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string phoneNumber { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }

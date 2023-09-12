@@ -5,39 +5,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.DataStorageLayer
+namespace ReolMarked.DataStorageLayer;
+
+public class GenericRepository<T> where T : class
 {
-    public class GenericRepository<T> where T : class
+    private readonly DataBaseContext _dbContext;
+    public GenericRepository(DataBaseContext dbContext)
     {
-        private readonly DataBaseContext _dbContext;
-        public GenericRepository(DataBaseContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        _dbContext = dbContext;
+    }
 
-        public async Task<IEnumerable<T>> GetAsync()
-        {
-            return await _dbContext.Set<T>().ToListAsync();
-        }
+    public async Task<IEnumerable<T>> GetAsync()
+    {
+        return await _dbContext.Set<T>().ToListAsync();
+    }
 
-        public async Task<T> GetbyIdAsync(int id)
-        {
-            return await _dbContext.Set<T>().FindAsync(id);
-        }
+    public async Task<T> GetbyIdAsync(int id)
+    {
+        return await _dbContext.Set<T>().FindAsync(id);
+    }
 
-        public async Task CreateAsync(T entity)
-        {
-            await _dbContext.Set<T>().AddAsync(entity);
-        }
+    public async Task CreateAsync(T entity)
+    {
+        await _dbContext.Set<T>().AddAsync(entity);
+    }
 
-        public void UpdateAsync(T entity)
-        {
-            _dbContext.Set<T>().Update(entity);
-        }
+    public async Task UpdateAsync(T entity)
+    {
+        _dbContext.Set<T>().Update(entity);
+        await _dbContext.SaveChangesAsync();
+    }
 
-        public void DeleteAsync(T entity)
-        {
-            _dbContext.Set<T>().Remove(entity);
-        }
+    public async Task DeleteAsync(T entity)
+    {
+        _dbContext.Set<T>().Remove(entity);
+        await _dbContext.SaveChangesAsync();
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "USF7yHKRU13v+9ZqJ+dmmWiFkHWEYxGfdjKVewRUbjDIhW21+ygNBlzGcQZeShMPEKb9jLTmzAEtgyONWPsYtQ==",
+  "dgSpecHash": "lR9jK88HYJYSEOqEcgBujgL3VoHicgY+3zQ0lItNFtwzjROK7gecNdvQU9xTg4nGvtorIfHnB6XifN6EKTwmAA==",
   "success": true,
-  "projectFilePath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj",
+  "projectFilePath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eva20\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\eva20\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

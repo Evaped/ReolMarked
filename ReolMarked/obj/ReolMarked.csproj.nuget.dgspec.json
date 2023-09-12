@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj": {}
+    "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj": {}
   },
   "projects": {
-    "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj": {
+    "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj",
+        "projectUniqueName": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj",
         "projectName": "ReolMarked",
-        "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj",
+        "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj",
         "packagesPath": "C:\\Users\\eva20\\.nuget\\packages\\",
-        "outputPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\obj\\",
+        "outputPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eva20\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked
+namespace ReolMarked;
+public enum ShelfType
 {
-    public enum ShelfType
-    {
-        withGlass,
-        withoutGlass
-    }
+    withGlass,
+    withoutGlass
 }

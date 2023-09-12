@@ -3672,11 +3672,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\API\\API.csproj",
+      "projectUniqueName": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\API\\API.csproj",
+      "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\API\\API.csproj",
       "packagesPath": "C:\\Users\\eva20\\.nuget\\packages\\",
-      "outputPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\API\\obj\\",
+      "outputPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\eva20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3693,8 +3693,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj": {
-              "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\ReolMarked\\ReolMarked\\ReolMarked.csproj"
+            "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj": {
+              "projectPath": "D:\\Eva\\Datamatiker\\Programmering\\programmer\\2Semester\\ReolMarked\\reolmarked\\ReolMarked\\ReolMarked.csproj"
             }
           }
         }

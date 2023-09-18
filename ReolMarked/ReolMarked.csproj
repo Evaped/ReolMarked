@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UILayer\" />
+    <Compile Remove="UILayer\**" />
+    <EmbeddedResource Remove="UILayer\**" />
+    <None Remove="UILayer\**" />
   </ItemGroup>
 
   <ItemGroup>

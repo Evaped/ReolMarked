@@ -59,7 +59,8 @@ public class RenterController : ControllerBase
         }
 
         existingRenter.Id = updatedRenter.Id;
-        existingRenter.Name = updatedRenter.Name;
+        existingRenter.FirstName = updatedRenter.FirstName;
+        existingRenter.LastName = updatedRenter.LastName;
         existingRenter.Email = updatedRenter.Email;
         existingRenter.PhoneNumber = updatedRenter.PhoneNumber;
 

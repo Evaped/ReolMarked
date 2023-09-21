@@ -63,7 +63,7 @@ public class LeaseAgreementController : ControllerBase
         existingLeaseAgreement.StartDate = updatedLeaseAgreement.StartDate;
         existingLeaseAgreement.RentDuration = updatedLeaseAgreement.RentDuration;
         existingLeaseAgreement.IsPaid = updatedLeaseAgreement.IsPaid;
-        existingLeaseAgreement.PaidAmount = updatedLeaseAgreement.PaidAmount;
+        existingLeaseAgreement.Price = updatedLeaseAgreement.Price;
         existingLeaseAgreement.DateCreated = updatedLeaseAgreement.DateCreated;
 
         await _leaseAgreementRepository.UpdateAsync(existingLeaseAgreement);

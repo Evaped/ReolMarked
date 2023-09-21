@@ -17,9 +17,11 @@ public class LeaseAgreement
 
     public string Email { get; set; }
 
-    public Renter renter(int RenterID)
+    public Renter renter()
     {
-
+        throw new Exception("Doh");
     }
+
+    public int RenterId { get; set; }
     public DateTime DateCreated { get; set; }
 }

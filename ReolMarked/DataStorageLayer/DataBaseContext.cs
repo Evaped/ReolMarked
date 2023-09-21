@@ -14,9 +14,13 @@ namespace ReolMarked.DataStorageLayer
         public DbSet<Renter> Renters { get; set; }
         public DbSet<LeaseAgreement> LeaseAgreements { get; set; }
 
-        public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            if (!optionsBuilder.IsConfigured)
+            {
+                var connectionString = "Server=10.56.8.36; Database=P3_DB_2023_35; User Id=DB_F23_USER_35; Password=OPENDB_35;
+                optionsBuilder.UseSqlServer(connectionString);
+            }
         }
     }
 }

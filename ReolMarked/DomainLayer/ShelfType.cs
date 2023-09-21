@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace ReolMarked;
 public enum ShelfType
 {
-    withGlass = 1 ,
+    withGlass = 1,
     withoutGlass = 2
 }

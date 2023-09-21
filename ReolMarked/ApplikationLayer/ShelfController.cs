@@ -5,15 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.ApplikationLayer
+namespace ReolMarked.ApplikationLayer;
+public class ShelfController
 {
-    public class ShelfController
-    {
-        private readonly ShelfRepository _shelfRepository;
+    private readonly ShelfRepository _shelfRepository;
 
-        public ShelfController(ShelfRepository shelfRepository)
-        {
-            _shelfRepository = shelfRepository;
-        }
+    public ShelfController(ShelfRepository shelfRepository)
+    {
+        _shelfRepository = shelfRepository;
     }
 }

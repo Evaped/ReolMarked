@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ReolMarked.DataStorageLayer;
-
 public class GenericRepository<T> where T : class
 {
     private readonly DataBaseContext _dbContext;

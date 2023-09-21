@@ -1,5 +1,4 @@
 namespace ReolMarked.DomainLayer;
-
 public class ShelfLeaseAgreement
 {
     public Shelf Shelf { get; set; } = null;

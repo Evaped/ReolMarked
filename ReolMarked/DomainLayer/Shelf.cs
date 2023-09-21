@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked
+namespace ReolMarked;
+public class Shelf
 {
-    public class Shelf
-    {
-        public int Id { get; set; }
-        public string Location { get; set; }
-        public ShelfType shelfType { get; set; } 
-    }
+    public int Id { get; set; }
+    public string Location { get; set; }
+    public ShelfType shelfType { get; set; } 
 }

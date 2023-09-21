@@ -5,15 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.ApplikationLayer
+namespace ReolMarked.ApplikationLayer;
+public class RenterController
 {
-    public class RenterController
-    {
-        private readonly RenterRepository _renterRepository;
+    private readonly RenterRepository _renterRepository;
 
-        public RenterController(RenterRepository renterRepository)
-        {
-            _renterRepository = renterRepository;
-        }
+    public RenterController(RenterRepository renterRepository)
+    {
+        _renterRepository = renterRepository;
     }
 }

@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.DomainLayer
+namespace ReolMarked.DomainLayer;
+public class DTO
 {
-    public class DTO
-    {
 
-    }
 }

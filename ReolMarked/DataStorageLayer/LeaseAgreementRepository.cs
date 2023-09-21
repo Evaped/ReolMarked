@@ -6,13 +6,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.DataStorageLayer
+namespace ReolMarked.DataStorageLayer;
+public class LeaseAgreementRepository : GenericRepository<LeaseAgreement>
 {
-    public class LeaseAgreementRepository : GenericRepository<LeaseAgreement>
+    public LeaseAgreementRepository(DataBaseContext dbContext) : base(dbContext)
     {
-        public LeaseAgreementRepository(DataBaseContext dbContext) : base(dbContext)
-        {
-            
-        }
+        
     }
 }

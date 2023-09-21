@@ -6,19 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.ApplikationLayer
+namespace ReolMarked.ApplikationLayer;
+public class LeaseAgreementController
 {
-    public class LeaseAgreementController
+    private readonly LeaseAgreementRepository _leaseAgreementRepository;
+    public LeaseAgreementController(LeaseAgreementRepository leaseAgreementRepository)
     {
-        private readonly LeaseAgreementRepository _leaseAgreementRepository;
-        public LeaseAgreementController(LeaseAgreementRepository leaseAgreementRepository)
-        {
-            _leaseAgreementRepository = leaseAgreementRepository;
-        }
+        _leaseAgreementRepository = leaseAgreementRepository;
+    }
 
-        public void add(LeaseAgreement entity)
-        {
-            _leaseAgreementRepository.CreateAsync(entity);
-        }
+    public void add(LeaseAgreement entity)
+    {
+        _leaseAgreementRepository.CreateAsync(entity);
     }
 }

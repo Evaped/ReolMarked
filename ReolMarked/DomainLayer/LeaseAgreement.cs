@@ -12,7 +12,7 @@ public class LeaseAgreement
     public DateTime StartDate { get; set; }
     public int RentDuration { get; set; }
     public bool IsPaid { get; set; }
-    public double PaidAmount { get; set; }
+    public double Price { get; set; }
     public int ShelvesCount { get; set; }
 
     public string Email { get; set; }

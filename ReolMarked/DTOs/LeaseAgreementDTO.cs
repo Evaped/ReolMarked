@@ -22,6 +22,6 @@ public class LeaseAgreementDTO
             Price = leaseAgreement.Price,
             ShelvesCount = leaseAgreement.ShelvesCount,
             Email = leaseAgreement.Email
-        }
+        };
     }
 }

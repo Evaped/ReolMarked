@@ -13,5 +13,13 @@ public class LeaseAgreement
     public int RentDuration { get; set; }
     public bool IsPaid { get; set; }
     public double PaidAmount { get; set; }
+    public int ShelvesCount { get; set; }
+
+    public string Email { get; set; }
+
+    public Renter renter(int RenterID)
+    {
+
+    }
     public DateTime DateCreated { get; set; }
 }

@@ -9,7 +9,7 @@ namespace ReolMarked.ApplikationLayer;
 
 public class PriceController : PriceDto
 {
-    public PriceDto GetPrice (int shelfCount, int weeksCount, ShelfType shelfType, )
+    public PriceDto GetPrice (int shelfCount, int weeksCount, ShelfType shelfType)
     {
         double basePricePerWeek = 50;
         double pricePerShelf = 10;
@@ -20,7 +20,7 @@ public class PriceController : PriceDto
             discountMultiplier = 0.9;
         }
 
-        double totalPrice = (basePricePerWeek * weeksCount) + (pricePerShelf * shelfType * weeksCount);
+        double totalPrice = (basePricePerWeek * weeksCount) + (pricePerShelf * (double)shelfType * weeksCount);
         totalPrice *= discountMultiplier;
 
         var priceDto = new PriceDto

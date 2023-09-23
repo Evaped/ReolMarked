@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols;
 using ReolMarked.DomainLayer;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ public class DataBaseContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var connectionString = "Server=10.56.8.36; Database=P3_DB_2023_35; User Id=DB_F23_USER_35; Password=OPENDB_35;";
+            var connectionString = ConfigurationManager.ConnectionStrings["DatabaseServerInstance"].ConnectionString; ;
             optionsBuilder.UseSqlServer(connectionString);
         }
     }

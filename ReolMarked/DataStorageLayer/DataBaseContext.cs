@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ReolMarked.DataStorageLayer;
+
 public class DataBaseContext : DbContext
 {
     public DbSet<Shelf> Shelves { get; set; }
@@ -23,3 +24,4 @@ public class DataBaseContext : DbContext
         }
     }
 }
+

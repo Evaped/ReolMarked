@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace ReolMarked.DataStorageLayer;
 public class DataBaseContext : DbContext
@@ -14,11 +15,11 @@ public class DataBaseContext : DbContext
     public DbSet<Renter> Renters { get; set; }
     public DbSet<LeaseAgreement> LeaseAgreements { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder, IConfiguration configuration)
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["DatabaseServerInstance"].ConnectionString; ;
+            var connectionString = configuration.GetConnectionString("DatabaseServerInstance");
             optionsBuilder.UseSqlServer(connectionString);
         }
     }

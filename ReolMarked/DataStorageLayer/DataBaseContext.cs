@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 
 namespace ReolMarked.DataStorageLayer;
+
 public class DataBaseContext : DbContext
 {
     public DbSet<Shelf> Shelves { get; set; }
@@ -24,3 +25,4 @@ public class DataBaseContext : DbContext
         }
     }
 }
+

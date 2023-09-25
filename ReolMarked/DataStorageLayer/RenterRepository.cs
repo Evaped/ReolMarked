@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ReolMarked.DataStorageLayer;
 public class RenterRepository : GenericRepository<Renter>
 {
-    public RenterRepository(DataBaseContext dbContext) : base(dbContext)
+    public RenterRepository(DbContext dbContext) : base(dbContext)
     {
         
     }

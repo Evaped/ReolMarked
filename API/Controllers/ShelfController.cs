@@ -60,7 +60,7 @@ public class ShelfController : ControllerBase
 
         existingShelf.Id = updatedShelf.Id;
         existingShelf.Location = updatedShelf.Location;
-        existingShelf.shelfType = updatedShelf.shelfType;
+        existingShelf.ShelfType = updatedShelf.ShelfType;
 
         await _shelfRepository.UpdateAsync(existingShelf);
 

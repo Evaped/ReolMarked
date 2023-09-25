@@ -54,5 +54,25 @@ public class ShelfRepositoryShould
 
         Assert.Equal("r2r3", response.Location);
     }
+
+    [Fact]
+    public async Task DeleteShelf()
+    {
+        var repo = new ShelfRepository(_dbContext);
+        var shelf2 = new Shelf()
+        {
+            Location = "r1r1",
+            shelfType = ShelfType.withGlass
+        };
+        await repo.CreateAsync(shelf2);
+
+        await repo.DeleteAsync(shelf2);
+
+        var shelves = await repo.GetAsync();
+        Assert.Equal(0 , shelves.Count());
+
+    }
+    [Fact]
+    public
 }
 

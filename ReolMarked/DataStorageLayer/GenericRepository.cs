@@ -16,7 +16,7 @@ public class GenericRepository<T> where T : class
         return await _dbContext.Set<T>().ToListAsync();
     }
 
-    public async Task<T> GetbyIdAsync(int id)
+    public async Task<T> GetByIdAsync(int id)
     {
         return await _dbContext.Set<T>().FindAsync(id);
     }

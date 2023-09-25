@@ -25,7 +25,7 @@ public class LeaseAgreementController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetRenterById(int id)
     {
-        var leaseAgreement = await _leaseAgreementRepository.GetbyIdAsync(id);
+        var leaseAgreement = await _leaseAgreementRepository.GetByIdAsync(id);
         if (leaseAgreement == null)
         {
             return NotFound();
@@ -53,7 +53,7 @@ public class LeaseAgreementController : ControllerBase
             return BadRequest();
         }
 
-        var existingLeaseAgreement = await _leaseAgreementRepository.GetbyIdAsync(id);
+        var existingLeaseAgreement = await _leaseAgreementRepository.GetByIdAsync(id);
         if (existingLeaseAgreement == null)
         {
             return NotFound();
@@ -74,7 +74,7 @@ public class LeaseAgreementController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteLeaseAgreement(int id)
     {
-        var renter = await _leaseAgreementRepository.GetbyIdAsync(id);
+        var renter = await _leaseAgreementRepository.GetByIdAsync(id);
         if (renter == null)
         {
             return NotFound();

@@ -12,4 +12,8 @@ public class RenterRepository : GenericRepository<Renter>
     {
         
     }
+    public async Task<Renter> GetByEmailAsync(string email)
+    {
+        return await _dbContext.Set<Renter>().FirstOrDefaultAsync(x => x.Email.Equals(email));
+    }
 }

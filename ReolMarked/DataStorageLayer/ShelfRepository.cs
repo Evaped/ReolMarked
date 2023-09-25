@@ -12,4 +12,5 @@ public class ShelfRepository : GenericRepository<Shelf>
     {
 
     }
+    public async Task<Shelf> GetShelfByLocationName(string locationName)
 }

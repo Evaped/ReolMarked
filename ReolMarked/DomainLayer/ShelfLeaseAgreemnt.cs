@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace ReolMarked.DomainLayer;
+
+[PrimaryKey(nameof(LeaseAgreementId), nameof(ShelfId))]
 public class ShelfLeaseAgreement
 {
     public Shelf Shelf { get; set; } = null;

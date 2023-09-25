@@ -26,7 +26,7 @@ public class ShelfRepositoryShould
         var shelf = new Shelf()
         {
             Location = "location",
-            shelfType = ShelfType.withoutGlass,
+            ShelfType = ShelfType.withoutGlass,
         };
 
 
@@ -43,7 +43,7 @@ public class ShelfRepositoryShould
         var shelf1 = new Shelf()
         {
             Location = "1234",
-            shelfType = ShelfType.withoutGlass,
+            ShelfType = ShelfType.withoutGlass,
         };
         await repo.CreateAsync(shelf1);
 
@@ -62,7 +62,7 @@ public class ShelfRepositoryShould
         var shelf2 = new Shelf()
         {
             Location = "r1r1",
-            shelfType = ShelfType.withGlass
+            ShelfType = ShelfType.withGlass
         };
         await repo.CreateAsync(shelf2);
 
@@ -79,7 +79,7 @@ public class ShelfRepositoryShould
         var shelf = new Shelf()
         {
             Location = "r1r1",
-            shelfType = ShelfType.withGlass
+            ShelfType = ShelfType.withGlass
         };
         await repo.CreateAsync(shelf);
 
@@ -94,25 +94,62 @@ public class ShelfRepositoryShould
         var shelf = new Shelf()
         {
             Location = "r1r1",
-            shelfType = ShelfType.withGlass
+            ShelfType = ShelfType.withGlass
         };
         await repo.CreateAsync(shelf);
         var shelf1 = new Shelf()
         {
             Location = "r1r1",
-            shelfType = ShelfType.withGlass
+            ShelfType = ShelfType.withGlass
         };
         await repo.CreateAsync(shelf1);
         var shelf2 = new Shelf()
         {
             Location = "r1r1",
-            shelfType = ShelfType.withGlass
+            ShelfType = ShelfType.withGlass
         };
         await repo.CreateAsync(shelf2);
 
         var response = await repo.GetAsync();
 
         Assert.Equal(3, response.Count());
+    }
+
+    [Fact]
+
+    public async Task IsShelfBooked()
+    {
+        
+       //TODO 
+       var dateTime = DateTime.Now;
+       var repo = new ShelfRepository(_dbContext);
+       var shelf = new Shelf()
+       {
+           Location = "r1r2",
+           ShelfType = ShelfType.withGlass,
+           BookingEndDate = new DateTime(2028, 4, 10)
+           
+       };
+       await repo.CreateAsync(shelf);
+       var shelf1 = new Shelf()
+       {
+           Location = "r1r1",
+           ShelfType = ShelfType.withGlass
+       };
+       
+       await repo.CreateAsync(shelf1);
+       var shelf2 = new Shelf()
+       {
+           Location = "r1r3",
+           ShelfType = ShelfType.withGlass,
+           BookingEndDate = new DateTime(2022, 4, 10)
+       };
+       await repo.CreateAsync(shelf2);
+       
+
+       var res = await repo.GetByDateTime(dateTime);
+       
+       Assert.Equal(shelf1.Location, res.Location);
     }
 }
 

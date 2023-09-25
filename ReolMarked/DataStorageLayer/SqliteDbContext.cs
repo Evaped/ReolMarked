@@ -8,6 +8,7 @@ public class SqliteDbContext: DbContext
     public DbSet<Shelf> Shelves { get; set; }
     public DbSet<Renter> Renters { get; set; }
     public DbSet<LeaseAgreement> LeaseAgreements { get; set; }
+    public DbSet<ShelfLeaseAgreement> ShelfLeaseAgreement { get; set; }
     public string DbPath { get; }
 
     public SqliteDbContext(DbContextOptions options) : base(options)

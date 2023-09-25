@@ -9,5 +9,8 @@ public class Shelf
 {
     public int Id { get; set; }
     public string Location { get; set; }
-    public ShelfType shelfType { get; set; } 
+    public ShelfType ShelfType { get; set; }
+    
+    public DateTime BookingStartDate { get; set; } 
+    public DateTime BookingEndDate { get; set; }
 }

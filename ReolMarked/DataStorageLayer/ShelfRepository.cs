@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ReolMarked.DataStorageLayer;
 public class ShelfRepository : GenericRepository<Shelf>
 {
-    public ShelfRepository(DataBaseContext dbContext) : base(dbContext)
+    public ShelfRepository(DbContext dbContext) : base(dbContext)
     {
 
     }

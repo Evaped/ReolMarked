@@ -20,7 +20,7 @@ public class PriceController : PriceDto
             discountMultiplier = 0.9;
         }
 
-        double totalPrice = (basePricePerWeek * weeksCount) + (pricePerShelf * shelfType * weeksCount);
+        double totalPrice = (basePricePerWeek * weeksCount) + (pricePerShelf * (double)shelfType * weeksCount);
         totalPrice *= discountMultiplier;
 
         var priceDto = new PriceDto

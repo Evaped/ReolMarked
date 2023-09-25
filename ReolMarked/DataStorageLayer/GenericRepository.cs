@@ -1,15 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using Microsoft.EntityFrameworkCore;
 
 namespace ReolMarked.DataStorageLayer;
 public class GenericRepository<T> where T : class
 {
-    private readonly DataBaseContext _dbContext;
-    public GenericRepository(DataBaseContext dbContext)
+    private readonly DbContext _dbContext;
+    public GenericRepository(DbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -27,6 +24,7 @@ public class GenericRepository<T> where T : class
     public async Task CreateAsync(T entity)
     {
         await _dbContext.Set<T>().AddAsync(entity);
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task UpdateAsync(T entity)

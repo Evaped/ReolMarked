@@ -73,6 +73,46 @@ public class ShelfRepositoryShould
 
     }
     [Fact]
-    public
+    public async Task GetShelfById()
+    {
+        var repo = new ShelfRepository(_dbContext);
+        var shelf = new Shelf()
+        {
+            Location = "r1r1",
+            shelfType = ShelfType.withGlass
+        };
+        await repo.CreateAsync(shelf);
+
+        var response = await repo.GetByIdAsync(shelf.Id);
+
+        Assert.Equal(shelf.Location, response.Location);
+    }
+    [Fact]
+    public async Task GetShelfList()
+    {
+        var repo = new ShelfRepository(_dbContext);
+        var shelf = new Shelf()
+        {
+            Location = "r1r1",
+            shelfType = ShelfType.withGlass
+        };
+        await repo.CreateAsync(shelf);
+        var shelf1 = new Shelf()
+        {
+            Location = "r1r1",
+            shelfType = ShelfType.withGlass
+        };
+        await repo.CreateAsync(shelf1);
+        var shelf2 = new Shelf()
+        {
+            Location = "r1r1",
+            shelfType = ShelfType.withGlass
+        };
+        await repo.CreateAsync(shelf2);
+
+        var response = await repo.GetAsync();
+
+        Assert.Equal(3, response.Count());
+    }
 }
 

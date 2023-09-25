@@ -35,5 +35,24 @@ public class ShelfRepositoryShould
         var shelves = await repo.GetAsync();
         Assert.Single(shelves);
     }
+
+    [Fact]
+    public async Task UpdateShelf()
+    {
+        var repo = new ShelfRepository(_dbContext);
+        var shelf1 = new Shelf()
+        {
+            Location = "1234",
+            shelfType = ShelfType.withoutGlass,
+        };
+        await repo.CreateAsync(shelf1);
+
+        shelf1.Location = "r2r3";
+        await repo.UpdateAsync(shelf1);
+
+        var response = await repo.GetShelfByLocationName(shelf1.Location);
+
+        Assert.Equal("r2r3", response.Location);
+    }
 }
 

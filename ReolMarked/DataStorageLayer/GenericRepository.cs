@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ReolMarked.DataStorageLayer;
 public class GenericRepository<T> where T : class
 {
-    private readonly DbContext _dbContext;
+    private protected readonly DbContext _dbContext;
     public GenericRepository(DbContext dbContext)
     {
         _dbContext = dbContext;

@@ -9,7 +9,7 @@ namespace ReolMarked.ApplikationLayer;
 
 public class PriceController : PriceDto
 {
-    public PriceDto GetPrice (int shelfCount, int weeksCount, ShelfType shelfType, )
+    public PriceDto GetPrice (int shelfCount, int weeksCount, ShelfType shelfType)
     {
         double basePricePerWeek = 50;
         double pricePerShelf = 10;

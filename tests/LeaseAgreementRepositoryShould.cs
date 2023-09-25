@@ -24,6 +24,8 @@ namespace tests
             Guid.NewGuid().ToString());
 
             _dbContext = new SqliteDbContext(dbOptions.Options);
+            
+            
         }
 
         [Fact]
@@ -31,15 +33,29 @@ namespace tests
         {
             var repoRenter = new RenterRepository(_dbContext);
             var repo = new LeaseAgreementRepository(_dbContext);
+
+            var repoShelfLease = new ShelfLeaseAgreementRepository(_dbContext);
+
+            var repoShelf = new ShelfRepository(_dbContext);
+
+            var shelf = new Shelf
+            {
+                Location = "r1",
+                ShelfType = ShelfType.withGlass
+            };
+
+            await repoShelf.CreateAsync(shelf);
+
+
             var LeaseDTO = new LeaseAgreementDTO()
             {
                 StartDate = DateTime.Now,
                 RentDuration = 10,
                 Price = 500,
-                ShelvesCount = 1,
+                ShelvesCount = 5,
                 Email = "email@benni.com",
             };
-            
+
             Renter renter = await repoRenter.GetByEmailAsync(LeaseDTO.Email);
 
             if (renter == null)
@@ -50,7 +66,7 @@ namespace tests
                 };
                 await repoRenter.CreateAsync(renter);
             }
-            
+
             var leaseAgreement = new LeaseAgreement()
             {
                 StartDate = LeaseDTO.StartDate,
@@ -62,7 +78,17 @@ namespace tests
             await repo.CreateAsync(leaseAgreement);
 
             var leases = await repo.GetAsync();
-            Assert.Single(leases); 
+
+
+            var shelfLeaseAgreement = new ShelfLeaseAgreement
+            {
+                ShelfId = shelf.Id,
+                LeaseAgreementId = leaseAgreement.Id
+            };
+
+            await repoShelfLease.CreateAsync(shelfLeaseAgreement);
+
+        Assert.Single(leases); 
         }
 
         //[Fact]

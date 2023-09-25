@@ -5,11 +5,12 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ReolMarked.DataStorageLayer;
 public class LeaseAgreementRepository : GenericRepository<LeaseAgreement>
 {
-    public LeaseAgreementRepository(DataBaseContext dbContext) : base(dbContext)
+    public LeaseAgreementRepository(DbContext dbContext) : base(dbContext)
     {
         
     }

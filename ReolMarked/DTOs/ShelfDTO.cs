@@ -16,7 +16,7 @@ public class ShelfDTO
         return new ShelfDTO
         {
             Location = shelf.Location,
-            _shelfType = (ShelfType)shelf.shelfType
+            _shelfType = (ShelfType)shelf.ShelfType
         };
     }
 }

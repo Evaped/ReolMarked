@@ -24,7 +24,7 @@ public class ShelfController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetShelfById(int id)
     {
-        var shelf = await _shelfRepository.GetbyIdAsync(id);
+        var shelf = await _shelfRepository.GetByIdAsync(id);
         if (shelf == null)
         {
             return NotFound();
@@ -52,7 +52,7 @@ public class ShelfController : ControllerBase
             return BadRequest();
         }
 
-        var existingShelf = await _shelfRepository.GetbyIdAsync(id);
+        var existingShelf = await _shelfRepository.GetByIdAsync(id);
         if (existingShelf == null)
         {
             return NotFound();
@@ -60,7 +60,7 @@ public class ShelfController : ControllerBase
 
         existingShelf.Id = updatedShelf.Id;
         existingShelf.Location = updatedShelf.Location;
-        existingShelf.shelfType = updatedShelf.shelfType;
+        existingShelf.ShelfType = updatedShelf.ShelfType;
 
         await _shelfRepository.UpdateAsync(existingShelf);
 
@@ -70,7 +70,7 @@ public class ShelfController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteShelf(int id)
     {
-        var shelf = await _shelfRepository.GetbyIdAsync(id);
+        var shelf = await _shelfRepository.GetByIdAsync(id);
         if (shelf == null)
         {
             return NotFound();

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ReolMarked.DataStorageLayer;
 public class GenericRepository<T> where T : class
 {
-    private readonly DbContext _dbContext;
+    private protected readonly DbContext _dbContext;
     public GenericRepository(DbContext dbContext)
     {
         _dbContext = dbContext;
@@ -16,7 +16,7 @@ public class GenericRepository<T> where T : class
         return await _dbContext.Set<T>().ToListAsync();
     }
 
-    public async Task<T> GetbyIdAsync(int id)
+    public async Task<T> GetByIdAsync(int id)
     {
         return await _dbContext.Set<T>().FindAsync(id);
     }

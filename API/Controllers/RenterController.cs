@@ -24,7 +24,7 @@ public class RenterController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetRenterById(int id)
     {
-        var renter = await _renterRepository.GetbyIdAsync(id);
+        var renter = await _renterRepository.GetByIdAsync(id);
         if (renter == null)
         {
             return NotFound();
@@ -52,7 +52,7 @@ public class RenterController : ControllerBase
             return BadRequest();
         }
 
-        var existingRenter = await _renterRepository.GetbyIdAsync(id);
+        var existingRenter = await _renterRepository.GetByIdAsync(id);
         if (existingRenter == null)
         {
             return NotFound();
@@ -72,7 +72,7 @@ public class RenterController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteRenter(int id)
     {
-        var renter = await _renterRepository.GetbyIdAsync(id);
+        var renter = await _renterRepository.GetByIdAsync(id);
         if (renter == null)
         {
             return NotFound();

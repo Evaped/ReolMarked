@@ -9,14 +9,14 @@ namespace ReolMarked.DTOs;
 public class ShelfDTO
 {
     public string Location { get; set; }
-    public ShelfType _shelfType { get; set; }
+    public ShelfType ShelfType { get; set; }
 
     public ShelfDTO MapShelfToDTO(Shelf shelf)
     {
         return new ShelfDTO
         {
             Location = shelf.Location,
-            _shelfType = (ShelfType)shelf.ShelfType
+            ShelfType = (ShelfType)shelf.ShelfType
         };
     }
 }

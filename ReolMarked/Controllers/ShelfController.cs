@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ReolMarked.DataStorageLayer;
+using ReolMarked.DTOs;
 
 namespace ReolMarked.Controllers
 {
@@ -11,11 +13,17 @@ namespace ReolMarked.Controllers
     [ApiController]
     public class ShelfController : ControllerBase
     {
+        private readonly ShelfRepository _repository;
+
+        public ShelfController(ShelfRepository repository)
+        {
+            _repository = repository;
+        }
         // GET: api/Shelf
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Shelf>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _repository.GetAsync();
         }
 
         // GET: api/Shelf/5
@@ -27,8 +35,18 @@ namespace ReolMarked.Controllers
 
         // POST: api/Shelf
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<int> Post(ShelfDTO shelfDto)
         {
+            //TODO tilføj en shelfDTO
+            
+            var shelf = new Shelf
+            {
+                Location = shelfDto.Location,
+                ShelfType = shelfDto.ShelfType
+            };
+    
+            await  _repository.CreateAsync(shelf);
+            return shelf.Id;
         }
 
         // PUT: api/Shelf/5

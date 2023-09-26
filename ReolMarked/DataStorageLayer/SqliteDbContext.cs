@@ -13,7 +13,7 @@ public class SqliteDbContext: DbContext
 
     public SqliteDbContext(DbContextOptions options) : base(options)
     {
-        var folder = Environment.SpecialFolder.LocalApplicationData;
+        var folder = Environment.SpecialFolder.Desktop;
         var path = Environment.GetFolderPath(folder);
         DbPath = System.IO.Path.Join(path, "reol.db");
     }
@@ -29,7 +29,5 @@ public class SqliteDbContext: DbContext
         }
         
     }
-    
-    
         
 }

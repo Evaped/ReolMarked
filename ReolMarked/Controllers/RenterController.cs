@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.ApplikationLayer;
+namespace ReolMarked.Controllers;
 public class RenterController
 {
     private readonly RenterRepository _renterRepository;

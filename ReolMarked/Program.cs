@@ -8,6 +8,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<SqliteDbContext>();
 builder.Services.AddScoped(typeof(GenericRepository<>));
 builder.Services.AddScoped<ShelfRepository>();
+builder.Services.AddScoped<LeaseAgreementRepository>();
+builder.Services.AddScoped<RenterRepository>();
+builder.Services.AddScoped<ShelfLeaseAgreementRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

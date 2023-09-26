@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ReolMarked.DataStorageLayer;
 public class LeaseAgreementRepository : GenericRepository<LeaseAgreement>
 {
-    public LeaseAgreementRepository(DbContext dbContext) : base(dbContext)
+    public LeaseAgreementRepository(SqliteDbContext dbContext) : base(dbContext)
     {
         
     }

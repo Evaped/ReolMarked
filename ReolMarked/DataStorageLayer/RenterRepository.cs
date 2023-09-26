@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ReolMarked.DataStorageLayer;
 public class RenterRepository : GenericRepository<Renter>
 {
-    public RenterRepository(DbContext dbContext) : base(dbContext)
+    public RenterRepository(SqliteDbContext dbContext) : base(dbContext)
     {
         
     }

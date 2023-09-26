@@ -405,3 +405,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+/ReolMarked/Migrations/20230926111610_InitialCreate.cs
+/ReolMarked/Migrations/20230926111610_InitialCreate.Designer.cs
+/ReolMarked/Migrations/SqliteDbContextModelSnapshot.cs
+/ReolMarked/Migrations/SqliteDbContextModelSnapshot.cs

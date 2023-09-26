@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReolMarked.ApplikationLayer;
+namespace ReolMarked.Controllers;
 public class LeaseAgreementController
 {
     private readonly LeaseAgreementRepository _leaseAgreementRepository;

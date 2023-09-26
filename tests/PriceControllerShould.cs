@@ -1,4 +1,5 @@
 ﻿using ReolMarked.DTOs;
+using System.Net.Mail;
 
 namespace tests
 {
@@ -38,6 +39,24 @@ namespace tests
             Assert.Equal(525, priceDto.Price);
             Assert.Equal(75, priceDto.Discount);
 
+        }
+
+        [Fact]
+        public async Task GetPriceAndDiscountForOneShelfAndSevenWeeks()
+        {
+            var Lease2DTO = new LeaseAgreementDTO()
+            {
+                StartDate = DateTime.Now,
+                RentDuration = 7,
+                Price = 600,
+                ShelvesCount = 1,
+                Email = "mail@mail.dk"
+            };
+
+            var priceDto = GetPriceDTO(Lease2DTO);
+
+            Assert.Equal(612.5, priceDto.Price);
+            Assert.Equal(87,5, priceDto.Discount);
         }
 
         public PriceDto GetPriceDTO(LeaseAgreementDTO leaseAgreementDTO)

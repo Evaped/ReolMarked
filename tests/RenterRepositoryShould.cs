@@ -53,11 +53,11 @@ namespace tests
 
             await repo.CreateAsync(renter);
 
-            renter.LastName = "Hansen";
+            renter.LastName = "Jensen";
 
             await repo.UpdateAsync(renter);
 
-            Assert.Equal("Hansen", renter.LastName);
+            Assert.Equal("Jensen", renter.LastName);
         }
         [Fact]
         public async Task DeleteRenter()

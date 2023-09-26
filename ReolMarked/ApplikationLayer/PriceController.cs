@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ReolMarked.ApplikationLayer;
-
+/*
 public class PriceController : PriceDto
 {
     public PriceDto GetPrice (int shelfCount, int weeksCount, ShelfType shelfType)
@@ -32,3 +32,4 @@ public class PriceController : PriceDto
         return priceDto;
     }
 }
+*/

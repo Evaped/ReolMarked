@@ -9,6 +9,6 @@ namespace ReolMarked.DTOs
     public class PriceDto
     {
         public double Price { get; set; }
-        public bool Discount { get; set; }
+        public double Discount { get; set; }
     }
 }
